@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <style>
+     h1
+     {
+        text-align: center;
+     }
+     .box
+        {
+            height: 130px;
+            width: 230px;
+            border: 20px solid red;
+            padding: 10px 10px;
+            margin: 10px auto;
+        }
+       button
+       {
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: teal;
+        color: khaki;
+       }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <div class="box">
+      <input type="text" name="first" id="first" value="" />
+      <br /><br />
+      <input type="text" name="second" id="second" value="" /><br><br>
+
+      <button onclick="addition()">+</button>
+      <button onclick="sub()">-</button>
+       <button onclick="multification()">*</button>
+      <button onclick="divison()">/</button>
+
+      <script>
+        function addition() 
+        {
+          let first = Number(document.getElementById("first").value);
+          let second = Number(document.getElementById("second").value);
+          let total = Number(first + second);
+          alert(total);
+        }
+
+        function sub() 
+        {
+          let first = Number(document.getElementById("first").value);
+          let second = Number(document.getElementById("second").value);
+          let total = Number(first - second);
+          alert(total);
+        }
+          function multification() 
+        {
+          let first = Number(document.getElementById("first").value);
+          let second = Number(document.getElementById("second").value);
+          let total = Number(first * second);
+          alert(total);
+        }
+
+        function divison() 
+        {
+          let first = Number(document.getElementById("first").value);
+          let second = Number(document.getElementById("second").value);
+          let total = Number(first / second);
+          alert(total);
+        }
+      </script>
+</body>
+</html>
