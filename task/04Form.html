@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        border: 2px solid black;
+        margin: 0 auto;
+        height: 200px;
+        width: 700px;
+        text-align: center;
+      }
+      .name {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" onclick="return register()">
+      <div class="container">
+        <div class="name">
+          <input type="text" id="text" />
+          <p id="nm"></p>
+        </div>
+        <div class="name">
+          <input type="number" id="number" />
+          <p id="mo"></p>
+        </div>
+        <div class="name">
+          <input type="date" id="date" />
+          <p id="db"></p>
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      let name = document.getElementById("text").value;
+      let number = document.getElementById("number");
+      let date = document.getElementById("date").value;
+
+      function register() {
+        if (text.value == "") {
+          document.getElementById("nm").innerHTML = "This filed is required";
+          return false;
+        } else if (text.value.length <= 5) {
+          document.getElementById("nm").innerHTML = "Please Enter valid name";
+          return false;
+        } else {
+          document.getElementById("nm").innerHTML = "";
+        }
+
+        if (number.value == "") {
+          document.getElementById("mo").innerHTML = "This filed is required";
+          return false;
+        } else if (number.value.length <= 10) {
+          document.getElementById("mo").innerHTML =
+            "Please Enter valid Mobile number";
+          return false;
+        } else {
+          document.getElementById("mo").innerHTML = "";
+        }
+
+        if (date.value == "") {
+          document.getElementById("db").innerHTML = "This filed is required";
+          //return false;
+        } else {
+          document.getElementById("db").innerHTML = "";
+          //return true;
+        }
+      }
+    </script>
+  </body>
+</html>
